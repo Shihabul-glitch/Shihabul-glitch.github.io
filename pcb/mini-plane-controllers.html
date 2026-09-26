@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mini Plane Flight Controller PCBs | PCB Design | Shihabul Ehsan</title>
+    <meta name="description" content="Two ESP8266 flight controller PCBs by Shihabul Ehsan for a smartphone-controlled mini plane, designed in KiCad.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+    <div class="container nav-inner">
+        <a class="nav-brand" href="../index.html">Shihab<span>.</span></a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="../pcb.html" class="active">PCB Design</a></li>
+            <li><a href="../skills.html">Skills</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li class="nav-cta"><a class="btn btn-primary btn-sm" href="../files/Shihabul_Ehsan_CV.pdf" target="_blank" rel="noopener"><i class="fas fa-file-arrow-down"></i> CV</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <div class="container">
+
+        <p class="breadcrumb"><a href="../pcb.html"><i class="fas fa-arrow-left"></i> PCB Design</a> / Mini Plane Controllers</p>
+
+        <header class="page-head">
+            <p class="eyebrow"><i class="fas fa-plane"></i> Own design · KiCad · ESP8266</p>
+            <h1 class="page-title">Mini Plane Flight Controller PCBs</h1>
+            <p class="lead">Two ESP8266 flight controller boards for a smartphone-controlled mini plane, flown over Wi-Fi from a phone. I designed the schematic and PCB of both in KiCad.</p>
+        </header>
+
+        <section class="grid grid-aside">
+            <a class="hero-shot" href="../images/pcb/plane-controller-imu/1-top-3d-view.webp" data-lightbox data-caption="BMI088 IMU version, top side">
+                <img src="../images/pcb/plane-controller-imu/1-top-3d-view.webp" alt="3D view of the mini plane flight controller with BMI088 IMU" width="1600" height="1241">
+            </a>
+            <aside class="card">
+                <table class="spec-table">
+                    <tr><th>Tool</th><td>KiCad</td></tr>
+                    <tr><th>MCU</th><td>ESP8266</td></tr>
+                    <tr><th>Control</th><td>Wi-Fi from a smartphone</td></tr>
+                    <tr><th>Versions</th><td>No-IMU (2 motors) and BMI088 IMU (4 motor outputs)</td></tr>
+                    <tr><th>Sponsor</th><td>JLCPCB sponsored the IMU version</td></tr>
+                </table>
+            </aside>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-bolt"></i> Design highlights</h2>
+            <ul class="highlights">
+                <li><b>No-IMU version.</b> Two unidirectional DC motor drivers. It needs no IMU or PID loop because the mini plane's airframe is self-stable: thrown by hand, it glides nicely.</li>
+                <li><b>BMI088 IMU version.</b> Adds a BMI088 IMU for stabilization and four motor outputs.</li>
+                <li><b>PID roll stabilizer.</b> First tested with an MPU6050 (<a href="https://www.linkedin.com/posts/shihabul-ehsan-132464304_%F0%9D%90%83%F0%9D%90%9E%F0%9D%90%AF%F0%9D%90%9E%F0%9D%90%A5%F0%9D%90%A8%F0%9D%90%A9%F0%9D%90%9E%F0%9D%90%9D%F0%9D%90%80-%F0%9D%90%8C%F0%9D%90%A8%F0%9D%90%9B%F0%9D%90%A2%F0%9D%90%A5%F0%9D%90%9E-%F0%9D%90%82%F0%9D%90%A8%F0%9D%90%A7-ugcPost-7385681628603252736-HHN_" target="_blank" rel="noopener">flight demo</a>).</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-layer-group"></i> The two boards</h2>
+
+            <div class="sub-board">
+                <h3>1 · BMI088 IMU version</h3>
+                <p>ESP8266 with a BMI088 IMU and four motor outputs. PCB sponsored by JLCPCB.</p>
+                <div class="gallery">
+                    <figure>
+                        <a href="../images/pcb/plane-controller-imu/1-top-3d-view.webp" data-lightbox data-caption="Top side, 3D view">
+                            <img src="../images/pcb/plane-controller-imu/1-top-3d-view-thumb.webp" alt="Top side, 3D view" loading="lazy"></a>
+                        <figcaption>Top side, 3D view</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="../images/pcb/plane-controller-imu/2-bottom-3d-view.webp" data-lightbox data-caption="Bottom side, 3D view">
+                            <img src="../images/pcb/plane-controller-imu/2-bottom-3d-view-thumb.webp" alt="Bottom side, 3D view" loading="lazy"></a>
+                        <figcaption>Bottom side, 3D view</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="../images/pcb/plane-controller-imu/3-pcb-layout.webp" data-lightbox data-caption="PCB layout">
+                            <img src="../images/pcb/plane-controller-imu/3-pcb-layout-thumb.webp" alt="PCB layout" loading="lazy"></a>
+                        <figcaption>PCB layout</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="../images/pcb/plane-controller-imu/4-manufactured-boards-jlcpcb.webp" data-lightbox data-caption="Manufactured boards (JLCPCB)">
+                            <img src="../images/pcb/plane-controller-imu/4-manufactured-boards-jlcpcb-thumb.webp" alt="Manufactured boards (JLCPCB)" loading="lazy"></a>
+                        <figcaption>Manufactured boards (JLCPCB)</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="sub-board">
+                <h3>2 · No-IMU version</h3>
+                <p>ESP8266 with two unidirectional DC motor drivers, for the self-stable mini plane airframe.</p>
+                <div class="gallery">
+                    <figure>
+                        <a href="../images/pcb/plane-controller-no-imu/1-pcb-layout.webp" data-lightbox data-caption="PCB layout">
+                            <img src="../images/pcb/plane-controller-no-imu/1-pcb-layout-thumb.webp" alt="PCB layout" loading="lazy"></a>
+                        <figcaption>PCB layout</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="../images/pcb/plane-controller-no-imu/2-manufactured-boards.webp" data-lightbox data-caption="Manufactured boards">
+                            <img src="../images/pcb/plane-controller-no-imu/2-manufactured-boards-thumb.webp" alt="Manufactured boards" loading="lazy"></a>
+                        <figcaption>Manufactured boards</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="btn-row">
+                <a href="../pcb.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> All PCB work</a>
+                <a href="../projects.html" class="btn btn-outline">All projects</a>
+            </div>
+        </section>
+
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© <span class="year">2026</span> Shihabul Ehsan · Khulna, Bangladesh</p>
+        <div class="footer-social">
+            <a href="mailto:shihabulehsan@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/shihabul-ehsan-132464304/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Shihabul-glitch" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.youtube.com/@have_fun1107" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

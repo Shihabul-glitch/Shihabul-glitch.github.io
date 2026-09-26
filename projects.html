@@ -2,679 +2,315 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Projects | Shihab Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Projects | Shihabul Ehsan</title>
+    <meta name="description" content="Projects by Shihabul Ehsan — flight controllers, UAVs, robots, Kalman filters, PCB design and the PCB Studio Blender extension.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Projects Page Specific Styles */
-        .projects-header {
-            margin-bottom: 50px;
-        }
-        
-        .project-filter {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 30px 0 40px;
-        }
-        
-        .filter-btn {
-            padding: 8px 20px;
-            background: rgba(30, 41, 59, 0.8);
-            border: 1px solid #334155;
-            border-radius: 20px;
-            color: #cbd5e1;
-            font-size: 14px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .filter-btn.active,
-        .filter-btn:hover {
-            background: rgba(56, 189, 248, 0.15);
-            border-color: #38bdf8;
-            color: #7dd3fc;
-        }
-        
-        /* Enhanced Project Cards */
-        .project-card {
-            background: linear-gradient(145deg, #0f172a, #1e293b);
-            border-radius: 20px;
-            border: 1px solid #334155;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            height: 100%;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-8px);
-            border-color: #38bdf8;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-        
-        .project-header {
-            padding: 25px 25px 0;
-        }
-        
-        .project-status {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 6px 15px;
-            background: rgba(234, 179, 8, 0.1);
-            border: 1px solid rgba(234, 179, 8, 0.3);
-            border-radius: 20px;
-            font-size: 13px;
-            margin-bottom: 15px;
-        }
-        
-        .status-complete {
-            background: rgba(34, 197, 94, 0.1);
-            border-color: rgba(34, 197, 94, 0.3);
-        }
-        
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            background: #eab308;
-            border-radius: 50%;
-        }
-        
-        .status-dot.complete {
-            background: #22c55e;
-        }
-        
-        .project-body {
-            padding: 0 25px 25px;
-        }
-        
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin: 20px 0;
-        }
-        
-        .tech-tag {
-            background: rgba(56, 189, 248, 0.1);
-            border: 1px solid rgba(56, 189, 248, 0.2);
-            border-radius: 15px;
-            padding: 5px 12px;
-            font-size: 12px;
-            color: #7dd3fc;
-        }
-        
-        .project-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 25px;
-            padding-top: 20px;
-            border-top: 1px solid #334155;
-        }
-        
-        /* Project Categories */
-        .project-category {
-            margin-bottom: 60px;
-        }
-        
-        .category-title {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 30px;
-            color: #f8fafc;
-            font-size: 24px;
-        }
-        
-        .category-title i {
-            color: #38bdf8;
-        }
-        
-        /* Project Grid */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-        }
-        
-        /* Project Impact */
-        .project-impact {
-            background: rgba(15, 23, 42, 0.7);
-            border-radius: 16px;
-            padding: 20px;
-            margin-top: 20px;
-            border-left: 4px solid #38bdf8;
-        }
-        
-        .impact-title {
-            color: #38bdf8;
-            font-size: 14px;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <nav class="site-nav">
-    <div class="nav-container">
-        <div class="nav-brand">Shihab<span>.</span></div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="skills.html">Skills</a>
-            <a href="contact.html">Contact</a>
-        </div>
+    <div class="container nav-inner">
+        <a class="nav-brand" href="index.html">Shihab<span>.</span></a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="pcb.html">PCB Design</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="nav-cta"><a class="btn btn-primary btn-sm" href="files/Shihabul_Ehsan_CV.pdf" target="_blank" rel="noopener"><i class="fas fa-file-arrow-down"></i> CV</a></li>
+        </ul>
     </div>
 </nav>
 
 <main>
-    <section class="page-section">
-        <div class="projects-header">
+    <div class="container">
+
+        <header class="page-head">
+            <p class="eyebrow">Projects</p>
             <h1 class="page-title">Projects</h1>
-            <p class="page-intro">
-                A showcase of my work in UAV systems, robotics, and embedded flight control—demonstrating 
-                practical implementations from quadcopter flight controllers to autonomous robots.
+            <p class="lead">
+                Work in UAV systems, robotics, embedded flight control and PCB design, from
+                quadcopter flight controllers to autonomous robots and my own PCB rendering tool.
             </p>
-        </div>
-        
-        <!-- Project Filter -->
-        <div class="project-filter">
-            <button class="filter-btn active" data-filter="all">All Projects</button>
+        </header>
+
+        <div class="filter-bar" role="group" aria-label="Filter projects">
+            <button class="filter-btn active" data-filter="all">All</button>
             <button class="filter-btn" data-filter="uav">UAV Systems</button>
             <button class="filter-btn" data-filter="robotics">Robotics</button>
-            <button class="filter-btn" data-filter="embedded">Embedded Systems</button>
-            <button class="filter-btn" data-filter="control">Control Systems</button>
+            <button class="filter-btn" data-filter="embedded">Embedded</button>
+            <button class="filter-btn" data-filter="control">Control</button>
+            <button class="filter-btn" data-filter="pcb">PCB &amp; Hardware</button>
         </div>
-        
-        <!-- UAV & Flight Control Projects -->
-        <div class="project-category">
-            <h2 class="category-title">
-                <i class="fas fa-plane"></i> UAV & Flight Control Systems
-            </h2>
-            
-            <div class="projects-grid">
-                <!-- Project 1: Flight Controller Thesis -->
-                <article class="project-card" data-category="uav embedded control">
-                    <div class="project-header">
-                        <div class="project-status status-complete">
-                            <span class="status-dot complete"></span>
-                            <span>Thesis Project</span>
-                        </div>
-                        <h3 style="font-size: 20px; color: #f8fafc; margin-bottom: 10px;">
-                            Low-Cost Dual-Core Flight Controller for Quadcopter
-                        </h3>
-                    </div>
-                    
-                    <div class="project-body">
-                        <p style="color: #cbd5e1; line-height: 1.6; margin-bottom: 15px;">
-                            Designed and developed a custom flight controller from scratch for quadcopter applications. 
-                            Features dual-core processing, sensor fusion, PID stabilization, and real-time telemetry. 
-                            The system was rigorously tested under partial propeller disturbance conditions to evaluate 
-                            performance, reliability, and fault tolerance in challenging flight scenarios.
-                        </p>
-                        
-                        <div class="project-impact">
-                            <div class="impact-title">
-                                <i class="fas fa-bullseye"></i> Research Impact
-                            </div>
-                            <p style="color: #94a3b8; font-size: 14px;">
-                                Demonstrates cost-effective flight control solutions and establishes performance 
-                                benchmarks for UAV systems under adverse conditions.
-                            </p>
-                        </div>
-                        
-                        <div class="project-tech">
-                            <span class="tech-tag">STM32</span>
-                            <span class="tech-tag">C/C++</span>
-                            <span class="tech-tag">PID Control</span>
-                            <span class="tech-tag">Sensor Fusion</span>
-                            <span class="tech-tag">Quadcopter</span>
-                            <span class="tech-tag">Flight Control</span>
-                            <span class="tech-tag">Telemetry</span>
-                            <span class="tech-tag">Hardware Design</span>
-                        </div>
-                        
-                        <div class="project-links">
-                            <a href="https://www.youtube.com/watch?v=JkNA3yZqABM" target="_blank" class="btn btn-outline" style="padding: 8px 20px; font-size: 14px;">
-                                <i class="fab fa-youtube"></i> Flight Demo
-                            </a>
-                        </div>
-                    </div>
-                </article>
-                
-                <!-- Project 2: Smartphone-Controlled Quadcopter -->
-                <article class="project-card" data-category="uav embedded">
-                    <div class="project-header">
-                        <div class="project-status">
-                            <span class="status-dot"></span>
-                            <span>Active Development</span>
-                        </div>
-                        <h3 style="font-size: 20px; color: #f8fafc; margin-bottom: 10px;">
-                            Ultra Low-Cost Smartphone-Controlled Mini Quadcopter
-                        </h3>
-                    </div>
-                    
-                    <div class="project-body">
-                        <p style="color: #cbd5e1; line-height: 1.6; margin-bottom: 15px;">
-                            Designing and building a compact, affordable quadcopter controllable via smartphone app. 
-                            Features custom PCB design using EasyEDA/KiCAD, wireless communication, and intuitive 
-                            mobile interface. The project focuses on accessibility and educational applications, 
-                            making UAV technology approachable for beginners and enthusiasts.
-                        </p>
-                        
-                        <div class="project-impact">
-                            <div class="impact-title">
-                                <i class="fas fa-chart-line"></i> Key Features
-                            </div>
-                            <p style="color: #94a3b8; font-size: 14px;">
-                                Custom PCB design, smartphone integration, cost-effective components, and 
-                                educational focus for learning UAV fundamentals.
-                            </p>
-                        </div>
-                        
-                        <div class="project-tech">
-                            <span class="tech-tag">ESP32</span>
-                            <span class="tech-tag">PCB Design</span>
-                            <span class="tech-tag">EasyEDA</span>
-                            <span class="tech-tag">KiCAD</span>
-                            <span class="tech-tag">Bluetooth</span>
-                            <span class="tech-tag">Android App</span>
-                            <span class="tech-tag">Mini UAV</span>
-                        </div>
-                        
-                        <div class="project-links">
-                            <a href="https://www.youtube.com/watch?v=WqGxymdPIIk" target="_blank" class="btn btn-outline" style="padding: 8px 20px; font-size: 14px;">
-                                <i class="fab fa-youtube"></i> Demo Video
-                            </a>
-                            <a href="https://www.linkedin.com/posts/shihabul-ehsan-132464304_built-a-pcb-for-my-esp32-based-mini-drone-activity-7325415229075419136-_VZp" target="_blank" class="btn btn-outline" style="padding: 8px 20px; font-size: 14px;">
-                                <i class="fab fa-linkedin"></i> PCB Milling Post
-                            </a>
-                        </div>
-                    </div>
-                </article>
-                
-                <!-- Project 3: Glider Plane with Flight Controller -->
-                <article class="project-card" data-category="uav control">
-                    <div class="project-header">
-                        <div class="project-status status-complete">
-                            <span class="status-dot complete"></span>
-                            <span>Completed</span>
-                        </div>
-                        <h3 style="font-size: 20px; color: #f8fafc; margin-bottom: 10px;">
-                            Radio Controlled Glider Plane with PID Stabilizer
-                        </h3>
-                    </div>
-                    
-                    <div class="project-body">
-                        <p style="color: #cbd5e1; line-height: 1.6; margin-bottom: 15px;">
-                            Implemented quadcopter flight control algorithms on a foam glider plane with 
-                            PID stabilization in the roll axis. The project explores cross-platform control 
-                            system adaptation and demonstrates the versatility of flight control algorithms 
-                            across different UAV configurations.
-                        </p>
-                        
-                        <div class="project-impact">
-                            <div class="impact-title">
-                                <i class="fas fa-cogs"></i> Technical Innovation
-                            </div>
-                            <p style="color: #94a3b8; font-size: 14px;">
-                                Successfully adapted multi-rotor control algorithms to fixed-wing aircraft, 
-                                demonstrating algorithm portability across different UAV platforms.
-                            </p>
-                        </div>
-                        
-                        <div class="project-tech">
-                            <span class="tech-tag">Arduino</span>
-                            <span class="tech-tag">PID Control</span>
-                            <span class="tech-tag">RC Plane</span>
-                            <span class="tech-tag">Flight Stabilization</span>
-                            <span class="tech-tag">Control Systems</span>
-                            <span class="tech-tag">Foam Aircraft</span>
-                        </div>
-                        
-                        <div class="project-links">
-                            <a href="https://www.linkedin.com/posts/shihabul-ehsan-132464304_it-ended-with-a-crash-but-it-was-still-our-activity-7351220630668611587-bYV0" target="_blank" class="btn btn-outline" style="padding: 8px 20px; font-size: 14px;">
-                                <i class="fab fa-linkedin"></i> Flight Test Post
-                            </a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-        
-        <!-- Robotics Projects -->
-        <div class="project-category">
-            <h2 class="category-title">
-                <i class="fas fa-robot"></i> Robotics & Embedded Systems
-            </h2>
-            
-            <div class="projects-grid">
-                <!-- Project 4: Advanced Line Follower Robot -->
-                <article class="project-card" data-category="robotics embedded control">
-                    <div class="project-header">
-                        <div class="project-status">
-                            <span class="status-dot"></span>
-                            <span>Active Development</span>
-                        </div>
-                        <h3 style="font-size: 20px; color: #f8fafc; margin-bottom: 10px;">
-                            Advanced Line Follower Robot (Commercialization Project)
-                        </h3>
-                    </div>
-                    
-                    <div class="project-body">
-                        <p style="color: #cbd5e1; line-height: 1.6; margin-bottom: 15px;">
-                            Built over 10 line follower robots and participated in 8 national competitions. 
-                            Currently refining the design for commercialization as an educational robotics kit 
-                            for children. The project combines years of competition experience with practical 
-                            engineering to create a robust, reliable, and educational robotics platform.
-                        </p>
-                        
-                        <div class="project-impact">
-                            <div class="impact-title">
-                                <i class="fas fa-trophy"></i> Competition Success
-                            </div>
-                            <p style="color: #94a3b8; font-size: 14px;">
-                                8 national competitions, 10+ robot iterations, extensive PID tuning and sensor 
-                                optimization experience.
-                            </p>
-                        </div>
-                        
-                        <div class="project-tech">
-                            <span class="tech-tag">Arduino</span>
-                            <span class="tech-tag">IR Sensors</span>
-                            <span class="tech-tag">PID Control</span>
-                            <span class="tech-tag">Motor Control</span>
-                            <span class="tech-tag">Robotics</span>
-                            <span class="tech-tag">Educational</span>
-                            <span class="tech-tag">Product Development</span>
-                        </div>
-                        
-                        <div class="project-links">
-                            <a href="https://www.linkedin.com/posts/shihabul-ehsan-132464304_robotics-embeddedsystems-stm32-activity-7310300623999045632-jE37" target="_blank" class="btn btn-outline" style="padding: 8px 20px; font-size: 14px;">
-                                <i class="fab fa-linkedin"></i> Champion Post
-                            </a>
-                            <a href="https://www.linkedin.com/posts/shihabul-ehsan-132464304_i-ended-up-my-journey-in-line-follower-robot-activity-7350886070818951170-bZCi" target="_blank" class="btn btn-outline" style="padding: 8px 20px; font-size: 14px;">
-                                <i class="fas fa-flag-checkered"></i> Final Competition
-                            </a>
-                            <a href="https://lnkd.in/d8etxMTK" target="_blank" class="btn btn-outline" style="padding: 8px 20px; font-size: 14px;">
-                                <i class="fas fa-external-link-alt"></i> Project Resources
-                            </a>
-                        </div>
-                    </div>
-                </article>
-                
-                <!-- Project 5: Pipeline Monitoring Robot -->
-                <article class="project-card" data-category="robotics embedded">
-                    <div class="project-header">
-                        <div class="project-status status-complete">
-                            <span class="status-dot complete"></span>
-                            <span>Completed</span>
-                        </div>
-                        <h3 style="font-size: 20px; color: #f8fafc; margin-bottom: 10px;">
-                            Pipeline Corrosion Monitoring Robot
-                        </h3>
-                    </div>
-                    
-                    <div class="project-body">
-                        <p style="color: #cbd5e1; line-height: 1.6; margin-bottom: 15px;">
-                            Designed and developed the complete circuit and control code for an industrial 
-                            pipeline inspection robot. The system autonomously navigates pipelines while 
-                            monitoring for corrosion and structural defects, providing valuable data for 
-                            preventive maintenance in industrial applications.
-                        </p>
-                        
-                        <div class="project-impact">
-                            <div class="impact-title">
-                                <i class="fas fa-industry"></i> Industrial Application
-                            </div>
-                            <p style="color: #94a3b8; font-size: 14px;">
-                                Provides cost-effective pipeline inspection solution for industrial 
-                                maintenance and safety monitoring applications.
-                            </p>
-                        </div>
-                        
-                        <div class="project-tech">
-                            <span class="tech-tag">Embedded C</span>
-                            <span class="tech-tag">Circuit Design</span>
-                            <span class="tech-tag">Sensor Integration</span>
-                            <span class="tech-tag">Autonomous Navigation</span>
-                            <span class="tech-tag">Industrial Robotics</span>
-                            <span class="tech-tag">Maintenance Systems</span>
-                        </div>
-                        
-                        <div class="project-links">
-                            <a href="https://www.linkedin.com/posts/shihabul-ehsan-132464304_pipeline-corrosion-monitoring-robot-i-developed-activity-7309954515393220608-3IrK" target="_blank" class="btn btn-outline" style="padding: 8px 20px; font-size: 14px;">
-                                <i class="fab fa-linkedin"></i> Project Demo
-                            </a>
-                        </div>
-                    </div>
-                </article>
-                
-                <!-- Project 6: Humanoid Eye Toy -->
-                <article class="project-card" data-category="robotics embedded">
-                    <div class="project-header">
-                        <div class="project-status status-complete">
-                            <span class="status-dot complete"></span>
-                            <span>3rd Year Project</span>
-                        </div>
-                        <h3 style="font-size: 20px; color: #f8fafc; margin-bottom: 10px;">
-                            Humanoid Eye Toy that Interacts with Kids
-                        </h3>
-                    </div>
-                    
-                    <div class="project-body">
-                        <p style="color: #cbd5e1; line-height: 1.6; margin-bottom: 15px;">
-                            Created an interactive robotic toy with expressive eyes and responsive behaviors 
-                            that engage with children. The project combines robotics, human-computer interaction, 
-                            and child development principles to create an educational and entertaining companion.
-                        </p>
-                        
-                        <div class="project-impact">
-                            <div class="impact-title">
-                                <i class="fas fa-child"></i> Educational Impact
-                            </div>
-                            <p style="color: #94a3b8; font-size: 14px;">
-                                Demonstrates robotics applications in education and child development, 
-                                combining technical skills with user-centered design.
-                            </p>
-                        </div>
-                        
-                        <div class="project-tech">
-                            <span class="tech-tag">Servo Motors</span>
-                            <span class="tech-tag">Arduino</span>
-                            <span class="tech-tag">Human-Robot Interaction</span>
-                            <span class="tech-tag">Educational Toys</span>
-                            <span class="tech-tag">Interactive Design</span>
-                        </div>
-                        
-                        <div class="project-links">
-                            <a href="https://www.linkedin.com/posts/shihabul-ehsan-132464304_this-is-my-third-year-project-the-idea-was-activity-7309580540536348673-J8cV" target="_blank" class="btn btn-outline" style="padding: 8px 20px; font-size: 14px;">
-                                <i class="fab fa-linkedin"></i> Project Demo
-                            </a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-        
-        <!-- Advanced Projects -->
-        <div class="project-category">
-            <h2 class="category-title">
-                <i class="fas fa-filter"></i> Advanced Algorithms & Signal Processing
-            </h2>
-            
-            <div class="projects-grid">
-                <!-- Project 7: Kalman Filter Development -->
-                <article class="project-card" data-category="control embedded">
-                    <div class="project-header">
-                        <div class="project-status">
-                            <span class="status-dot"></span>
-                            <span>Algorithm Development</span>
-                        </div>
-                        <h3 style="font-size: 20px; color: #f8fafc; margin-bottom: 10px;">
-                            Extended & Unscented Kalman Filters for Low-Cost Quadcopter
-                        </h3>
-                    </div>
-                    
-                    <div class="project-body">
-                        <p style="color: #cbd5e1; line-height: 1.6; margin-bottom: 15px;">
-                            Developed Extended Kalman Filter (EKF) and Unscented Kalman Filter (UKF) 
-                            implementations in Python for sensor fusion in UAV systems. Created versions 
-                            for both 6 DOF and 9 DOF IMU configurations, focusing on accurate state 
-                            estimation and attitude determination for flight control applications.
-                        </p>
-                        
-                        <div class="project-impact">
-                            <div class="impact-title">
-                                <i class="fas fa-chart-line"></i> Algorithm Implementation
-                            </div>
-                            <p style="color: #94a3b8; font-size: 14px;">
-                                Advanced sensor fusion algorithms ready for integration into flight 
-                                control systems for improved UAV stability and navigation accuracy.
-                            </p>
-                        </div>
-                        
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Kalman Filter</span>
-                            <span class="tech-tag">Sensor Fusion</span>
-                            <span class="tech-tag">IMU</span>
-                            <span class="tech-tag">State Estimation</span>
-                            <span class="tech-tag">Signal Processing</span>
-                            <span class="tech-tag">Control Theory</span>
-                        </div>
-                        
-                        <div class="project-links">
-                            <a href="https://github.com/Shihabul-glitch" target="_blank" class="btn btn-outline" style="padding: 8px 20px; font-size: 14px;">
-                                <i class="fab fa-github"></i> View GitHub Profile
-                            </a>
-                        </div>
-                    </div>
-                </article>
-                
-                <!-- Project 8: Smartphone Controlled Mini Plane -->
-                <article class="project-card" data-category="uav control">
-                    <div class="project-header">
-                        <div class="project-status status-complete">
-                            <span class="status-dot complete"></span>
-                            <span>Completed</span>
-                        </div>
-                        <h3 style="font-size: 20px; color: #f8fafc; margin-bottom: 10px;">
-                            Smartphone-Controlled Low-Cost Mini Plane with PID Stabilizer
-                        </h3>
-                    </div>
-                    
-                    <div class="project-body">
-                        <p style="color: #cbd5e1; line-height: 1.6; margin-bottom: 15px;">
-                            Developed a compact fixed-wing aircraft with smartphone control interface 
-                            and PID-based stabilization system. Features roll axis stabilization for 
-                            smoother flight characteristics and easier piloting experience, particularly 
-                            for novice users learning UAV operation.
-                        </p>
-                        
-                        <div class="project-impact">
-                            <div class="impact-title">
-                                <i class="fas fa-mobile-alt"></i> Accessibility Innovation
-                            </div>
-                            <p style="color: #94a3b8; font-size: 14px;">
-                                Makes UAV piloting more accessible through smartphone control and 
-                                automated stabilization, lowering the barrier to entry for aerial robotics.
-                            </p>
-                        </div>
-                        
-                        <div class="project-tech">
-                            <span class="tech-tag">PID Control</span>
-                            <span class="tech-tag">Bluetooth</span>
-                            <span class="tech-tag">Smartphone App</span>
-                            <span class="tech-tag">Flight Stabilization</span>
-                            <span class="tech-tag">Fixed-Wing UAV</span>
-                            <span class="tech-tag">Remote Control</span>
-                        </div>
-                        
-                        <div class="project-links">
-                            <a href="https://www.linkedin.com/posts/shihabul-ehsan-132464304_%F0%9D%90%83%F0%9D%90%9E%F0%9D%90%AF%F0%9D%90%9E%F0%9D%90%A5%F0%9D%90%A8%F0%9D%90%A9%F0%9D%90%9E%F0%9D%90%9D%F0%9D%90%80-%F0%9D%90%8C%F0%9D%90%A8%F0%9D%90%9B%F0%9D%90%A2%F0%9D%90%A5%F0%9D%90%9E-%F0%9D%90%82%F0%9D%90%A8%F0%9D%90%A7-ugcPost-7385681628603252736-HHN_" target="_blank" class="btn btn-outline" style="padding: 8px 20px; font-size: 14px;">
-                                <i class="fab fa-linkedin"></i> Flight Demo
-                            </a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-        
-        <!-- Future Projects Section -->
-        <div style="margin-top: 80px; padding-top: 50px; border-top: 1px solid #334155;">
-            <h2 class="category-title">
-                <i class="fas fa-road"></i> Future Development Directions
-            </h2>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
-                <div style="background: rgba(15, 23, 42, 0.5); padding: 25px; border-radius: 16px; border: 1px dashed #475569;">
-                    <h3 style="color: #f8fafc; margin-bottom: 10px;">Autonomous Drone Swarms</h3>
-                    <p style="color: #94a3b8; font-size: 14px;">
-                        Exploring coordinated flight and swarm intelligence algorithms for multiple UAVs 
-                        operating collaboratively on complex missions.
+
+        <!-- ============ UAV & Flight Control ============ -->
+        <section class="section project-group">
+            <h2 class="section-title"><i class="fas fa-plane"></i> UAV &amp; Flight Control Systems</h2>
+            <div class="grid grid-2">
+
+                <article class="card card-hover project-card" data-category="uav embedded control pcb">
+                    <span class="status status--done">Thesis project</span>
+                    <h3>Low-Cost Dual-Core Flight Controller for Quadcopter</h3>
+                    <p>
+                        Designed and developed a custom flight controller from scratch for quadcopter applications.
+                        Features dual-core processing, sensor fusion, PID stabilization, and real-time telemetry.
+                        The system was tested under partial propeller disturbance conditions to evaluate
+                        performance, reliability, and fault tolerance in challenging flight scenarios.
                     </p>
+                    <div class="project-note">
+                        <b>Research impact</b>
+                        Demonstrates cost-effective flight control and establishes performance benchmarks
+                        for UAV systems under adverse conditions.
+                    </div>
+                    <div class="tags">
+                        <span class="tag">STM32</span><span class="tag">C/C++</span><span class="tag">PID Control</span>
+                        <span class="tag">Sensor Fusion</span><span class="tag">Telemetry</span><span class="tag">Hardware Design</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://www.youtube.com/watch?v=JkNA3yZqABM" target="_blank" rel="noopener" class="btn btn-outline btn-sm"><i class="fab fa-youtube"></i> Flight Demo</a>
+                    </div>
+                </article>
+
+                <article class="card card-hover project-card" data-category="uav embedded pcb">
+                    <span class="status status--done">Flight-tested</span>
+                    <h3>ESP32 Mini Drone with PCB Frame</h3>
+                    <p>
+                        Designed the schematic and PCB in KiCad; the PCB doubles as the airframe, with the arms and motor mounts built into the board. Inspired by Espressif's ESP-Drone. Manufactured by JLCPCB in framed and frameless versions, and it flies.
+                    </p>
+                    <div class="project-note">
+                        <b>Evolution</b>
+                        Chose a BMI088 IMU over the MPU6050 after real-world tests. An earlier EasyEDA prototype with an MPU6050, milled in the KUET fabrication lab, also flew.
+                    </div>
+                    <div class="tags"><span class="tag">KiCad</span><span class="tag">ESP32</span><span class="tag">BMI088</span><span class="tag">JLCPCB</span></div>
+                    <div class="project-links">
+                        <a href="pcb/esp-drone.html" class="btn btn-outline btn-sm"><i class="fas fa-images"></i> Board &amp; flight video</a>
+                        <a href="https://www.youtube.com/watch?v=WqGxymdPIIk" target="_blank" rel="noopener" class="btn btn-outline btn-sm"><i class="fab fa-youtube"></i> Prototype video</a>
+                    </div>
+                </article>
+
+                <article class="card card-hover project-card" data-category="uav control">
+                    <span class="status status--done">Completed</span>
+                    <h3>Radio-Controlled Glider Plane with PID Stabilizer</h3>
+                    <p>
+                        Implemented my quadcopter flight control algorithms on a foam glider plane with
+                        PID stabilization on the roll axis, adapting a multirotor controller to a
+                        fixed-wing airframe.
+                    </p>
+                    <div class="project-note">
+                        <b>Technical challenge</b>
+                        Porting multirotor control algorithms to fixed-wing aircraft across different UAV platforms.
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Arduino</span><span class="tag">PID Control</span><span class="tag">RC Plane</span>
+                        <span class="tag">Flight Stabilization</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://www.linkedin.com/posts/shihabul-ehsan-132464304_it-ended-with-a-crash-but-it-was-still-our-activity-7351220630668611587-bYV0" target="_blank" rel="noopener" class="btn btn-outline btn-sm"><i class="fab fa-linkedin"></i> Flight Test</a>
+                    </div>
+                </article>
+
+                <article class="card card-hover project-card" data-category="uav embedded control pcb">
+                    <span class="status status--done">Flight-tested</span>
+                    <h3>Mini Plane: ESP8266 Flight Controller PCBs</h3>
+                    <p>
+                        Designed two ESP8266 flight controller PCBs in KiCad for a smartphone-controlled mini plane flown over Wi-Fi: a no-IMU version with two DC motor drivers for the self-stable airframe, and a BMI088 IMU version with four motor outputs, sponsored by JLCPCB.
+                    </p>
+                    <div class="project-note">
+                        <b>Control</b>
+                        Implemented a PID roll stabilizer, first tested with an MPU6050.
+                    </div>
+                    <div class="tags"><span class="tag">KiCad</span><span class="tag">ESP8266</span><span class="tag">BMI088</span><span class="tag">PID Control</span></div>
+                    <div class="project-links">
+                        <a href="pcb/mini-plane-controllers.html" class="btn btn-outline btn-sm"><i class="fas fa-images"></i> Boards</a>
+                        <a href="https://www.linkedin.com/posts/shihabul-ehsan-132464304_%F0%9D%90%83%F0%9D%90%9E%F0%9D%90%AF%F0%9D%90%9E%F0%9D%90%A5%F0%9D%90%A8%F0%9D%90%A9%F0%9D%90%9E%F0%9D%90%9D%F0%9D%90%80-%F0%9D%90%8C%F0%9D%90%A8%F0%9D%90%9B%F0%9D%90%A2%F0%9D%90%A5%F0%9D%90%9E-%F0%9D%90%82%F0%9D%90%A8%F0%9D%90%A7-ugcPost-7385681628603252736-HHN_" target="_blank" rel="noopener" class="btn btn-outline btn-sm"><i class="fab fa-linkedin"></i> Flight demo</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ============ Robotics ============ -->
+        <section class="section project-group">
+            <h2 class="section-title"><i class="fas fa-robot"></i> Robotics &amp; Embedded Systems</h2>
+            <div class="grid grid-2">
+
+                <article class="card card-hover project-card" data-category="pcb robotics">
+                    <span class="status status--done">Own design</span>
+                    <h3>Vector Drive V1: 3-Board BLDC Motor Drive System</h3>
+                    <p>
+                        Designed the schematic and PCB layout of a 3-board system that drives two BLDC motors as the wheels of a high-speed ground robot.
+                    </p>
+                    <div class="project-note">
+                        <b>Rendered with PCB Studio</b>
+                        The board render was made with my own Blender extension.
+                    </div>
+                    <div class="tags"><span class="tag">PCB Design</span><span class="tag">BLDC</span><span class="tag">Multi-board</span></div>
+                    <div class="project-links">
+                        <a href="pcb/vector-drive-v1.html" class="btn btn-outline btn-sm"><i class="fas fa-images"></i> Render</a>
+                    </div>
+                </article>
+
+                <article class="card card-hover project-card" data-category="robotics embedded control">
+                    <span class="status">Active development</span>
+                    <h3>Advanced Line Follower Robot</h3>
+                    <p>
+                        Built over 10 line follower robots and competed in 8 national competitions.
+                        Now refining the design into an educational robotics kit for children, combining
+                        years of competition experience with a robust, reliable platform.
+                    </p>
+                    <div class="project-note">
+                        <b>Competition record</b>
+                        8 national competitions, 10+ robot iterations, extensive PID tuning and sensor optimization.
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Arduino</span><span class="tag">IR Sensors</span><span class="tag">PID Control</span>
+                        <span class="tag">Motor Control</span><span class="tag">Product Development</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://www.linkedin.com/posts/shihabul-ehsan-132464304_robotics-embeddedsystems-stm32-activity-7310300623999045632-jE37" target="_blank" rel="noopener" class="btn btn-outline btn-sm"><i class="fab fa-linkedin"></i> Champion Post</a>
+                        <a href="https://www.linkedin.com/posts/shihabul-ehsan-132464304_i-ended-up-my-journey-in-line-follower-robot-activity-7350886070818951170-bZCi" target="_blank" rel="noopener" class="btn btn-outline btn-sm"><i class="fas fa-flag-checkered"></i> Final Competition</a>
+                        <a href="https://lnkd.in/d8etxMTK" target="_blank" rel="noopener" class="btn btn-outline btn-sm"><i class="fas fa-arrow-up-right-from-square"></i> Resources</a>
+                    </div>
+                </article>
+
+                <article class="card card-hover project-card" data-category="robotics embedded pcb">
+                    <span class="status status--done">Completed</span>
+                    <h3>Pipeline Corrosion Monitoring Robot</h3>
+                    <p>
+                        Designed and developed the complete circuit and control code for a pipeline
+                        inspection robot that navigates pipelines while monitoring for corrosion and
+                        structural defects, supporting preventive maintenance.
+                    </p>
+                    <div class="project-note">
+                        <b>Industrial application</b>
+                        A cost-effective pipeline inspection solution for maintenance and safety monitoring.
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Embedded C</span><span class="tag">Circuit Design</span>
+                        <span class="tag">Sensor Integration</span><span class="tag">Industrial Robotics</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://www.linkedin.com/posts/shihabul-ehsan-132464304_pipeline-corrosion-monitoring-robot-i-developed-activity-7309954515393220608-3IrK" target="_blank" rel="noopener" class="btn btn-outline btn-sm"><i class="fab fa-linkedin"></i> Project Demo</a>
+                    </div>
+                </article>
+
+                <article class="card card-hover project-card" data-category="robotics embedded">
+                    <span class="status status--done">3rd-year project</span>
+                    <h3>Humanoid Eye Toy that Interacts with Kids</h3>
+                    <p>
+                        An interactive robotic toy with expressive eyes and responsive behaviors that
+                        engage with children, combining robotics and human-robot interaction.
+                    </p>
+                    <div class="project-note">
+                        <b>Educational impact</b>
+                        Robotics applied to education and child development, with user-centered design.
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Servo Motors</span><span class="tag">Arduino</span>
+                        <span class="tag">Human-Robot Interaction</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://www.linkedin.com/posts/shihabul-ehsan-132464304_this-is-my-third-year-project-the-idea-was-activity-7309580540536348673-J8cV" target="_blank" rel="noopener" class="btn btn-outline btn-sm"><i class="fab fa-linkedin"></i> Project Demo</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ============ Algorithms & Software ============ -->
+        <section class="section project-group">
+            <h2 class="section-title"><i class="fas fa-code"></i> Algorithms &amp; Software Tools</h2>
+            <div class="grid grid-2">
+
+                <article class="card card-hover project-card" data-category="control embedded">
+                    <span class="status">Algorithm development</span>
+                    <h3>Extended &amp; Unscented Kalman Filters for Low-Cost Quadcopter</h3>
+                    <p>
+                        Developed Extended (EKF) and Unscented (UKF) Kalman filters in Python for sensor
+                        fusion in UAV systems, for both 6-DOF and 9-DOF IMU configurations, focused on
+                        accurate attitude estimation for flight control.
+                    </p>
+                    <div class="project-note">
+                        <b>Next step</b>
+                        Integration into the flight controller for improved stability and navigation accuracy.
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Python</span><span class="tag">Kalman Filter</span><span class="tag">IMU</span>
+                        <span class="tag">State Estimation</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Shihabul-glitch" target="_blank" rel="noopener" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </article>
+
+                <article class="card card-hover project-card" data-category="pcb">
+                    <span class="status status--done">Released · v2.3.2</span>
+                    <h3>PCB Studio — Blender Extension for PCB Renders</h3>
+                    <p>
+                        A Blender extension that turns Altium PCB exports (OBJ + MTL) into professional
+                        product renders and turntable animations, built for engineers who don't know Blender.
+                        One-click scene setup, PCB material presets, studio lighting, camera presets and
+                        Cycles/EEVEE rendering.
+                    </p>
+                    <div class="project-note">
+                        <b>Tested on</b>
+                        Blender 4.5 LTS and 5.2 LTS, with an automated test suite.
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Python</span><span class="tag">Blender API</span><span class="tag">Altium</span>
+                        <span class="tag">3D Rendering</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Shihabul-glitch/Blender_PCB_Rendering" target="_blank" rel="noopener" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> Source</a>
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7491833083235549184/" target="_blank" rel="noopener" class="btn btn-outline btn-sm"><i class="fab fa-linkedin"></i> Animation demo</a>
+                        <a href="pcb.html#pcb-studio" class="btn btn-outline btn-sm"><i class="fas fa-layer-group"></i> Details</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ============ Future directions ============ -->
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-road"></i> Future directions</h2>
+            <div class="grid grid-3">
+                <div class="card card-dashed">
+                    <h3>Autonomous Drone Swarms</h3>
+                    <p>Coordinated flight and swarm algorithms for multiple UAVs working together on complex missions.</p>
                 </div>
-                
-                <div style="background: rgba(15, 23, 42, 0.5); padding: 25px; border-radius: 16px; border: 1px dashed #475569;">
-                    <h3 style="color: #f8fafc; margin-bottom: 10px;">AI-Enhanced Flight Control</h3>
-                    <p style="color: #94a3b8; font-size: 14px;">
-                        Implementing machine learning algorithms for adaptive flight control and 
-                        predictive maintenance in UAV systems.
-                    </p>
+                <div class="card card-dashed">
+                    <h3>AI-Enhanced Flight Control</h3>
+                    <p>Machine learning for adaptive flight control and predictive maintenance in UAV systems.</p>
                 </div>
-                
-                <div style="background: rgba(15, 23, 42, 0.5); padding: 25px; border-radius: 16px; border: 1px dashed #475569;">
-                    <h3 style="color: #f8fafc; margin-bottom: 10px;">ROS2 Integration</h3>
-                    <p style="color: #94a3b8; font-size: 14px;">
-                        Developing standardized robotic systems using ROS2 for modular, scalable 
-                        robotics and UAV applications.
-                    </p>
+                <div class="card card-dashed">
+                    <h3>ROS 2 Integration</h3>
+                    <p>Standardized, modular robotic and UAV systems built on ROS 2.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+    </div>
 </main>
 
 <footer class="site-footer">
-    <div class="nav-container">
-        <p>© 2024 Shihabul Ehsan. All rights reserved.</p>
-        <p style="margin-top: 10px; font-size: 12px; color: #94a3b8;">
-            <i class="fas fa-plane"></i> UAV & Robotics Portfolio
-        </p>
+    <div class="container footer-inner">
+        <p>© <span class="year">2026</span> Shihabul Ehsan · Khulna, Bangladesh</p>
+        <div class="footer-social">
+            <a href="mailto:shihabulehsan@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/shihabul-ehsan-132464304/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Shihabul-glitch" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.youtube.com/@have_fun1107" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
     </div>
 </footer>
 
 <script src="js/script.js"></script>
-<script>
-    // Simple filter functionality
-    document.querySelectorAll('.filter-btn').forEach(button => {
-        button.addEventListener('click', function() {
-            // Remove active class from all buttons
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            
-            // Add active class to clicked button
-            this.classList.add('active');
-            
-            const filter = this.getAttribute('data-filter');
-            const projects = document.querySelectorAll('.project-card');
-            
-            projects.forEach(project => {
-                if (filter === 'all' || project.getAttribute('data-category').includes(filter)) {
-                    project.style.display = 'block';
-                } else {
-                    project.style.display = 'none';
-                }
-            });
-        });
-    });
-</script>
 </body>
 </html>

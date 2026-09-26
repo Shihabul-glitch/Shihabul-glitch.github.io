@@ -2,578 +2,178 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Skills | Shihab Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Skills | Shihabul Ehsan</title>
+    <meta name="description" content="Technical skills of Shihabul Ehsan — Altium Designer, KiCad, embedded C/C++, STM32, ESP32, flight control, sensor fusion and ROS 2.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Skills Page Specific Styles */
-        .skills-header {
-            margin-bottom: 50px;
-        }
-        
-        /* Skills Grid */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-        
-        .skill-category {
-            background: linear-gradient(145deg, #0f172a, #1e293b);
-            border-radius: 20px;
-            padding: 30px;
-            border: 1px solid #334155;
-            transition: border-color 0.3s ease;
-        }
-        
-        .skill-category:hover {
-            border-color: #38bdf8;
-        }
-        
-        .category-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 25px;
-        }
-        
-        .category-icon {
-            font-size: 32px;
-            color: #38bdf8;
-            width: 60px;
-            height: 60px;
-            background: rgba(56, 189, 248, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        /* Skill Items with Progress Bars */
-        .skill-item {
-            margin-bottom: 20px;
-        }
-        
-        .skill-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px;
-        }
-        
-        .skill-name {
-            color: #f1f5f9;
-            font-size: 15px;
-            font-weight: 600;
-        }
-        
-        .skill-level {
-            color: #7dd3fc;
-            font-size: 14px;
-        }
-        
-        .progress-bar {
-            height: 8px;
-            background: #1e293b;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-        
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #38bdf8, #7dd3fc);
-            border-radius: 4px;
-            transition: width 1.5s ease-in-out;
-        }
-        
-        /* Expertise Levels */
-        .expertise-levels {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 25px;
-            margin: 50px 0;
-        }
-        
-        .level-card {
-            text-align: center;
-            padding: 25px;
-            background: rgba(15, 23, 42, 0.7);
-            border-radius: 16px;
-            border: 1px solid #334155;
-        }
-        
-        .level-icon {
-            font-size: 40px;
-            color: #38bdf8;
-            margin-bottom: 15px;
-        }
-        
-        /* Certifications & Learning */
-        .certifications {
-            margin-top: 60px;
-            padding-top: 50px;
-            border-top: 1px solid #334155;
-        }
-        
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-        
-        .cert-card {
-            background: rgba(15, 23, 42, 0.5);
-            padding: 20px;
-            border-radius: 12px;
-            border-left: 4px solid #38bdf8;
-        }
-        
-        .cert-title {
-            color: #f8fafc;
-            margin-bottom: 8px;
-            font-size: 16px;
-        }
-        
-        .cert-desc {
-            color: #94a3b8;
-            font-size: 14px;
-        }
-        
-        /* Skills Visualization */
-        .skills-visual {
-            background: rgba(15, 23, 42, 0.7);
-            border-radius: 20px;
-            padding: 35px;
-            margin-top: 60px;
-            border: 1px solid #334155;
-        }
-        
-        .visual-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        .visual-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 25px;
-        }
-        
-        .visual-item {
-            text-align: center;
-        }
-        
-        .visual-value {
-            font-size: 36px;
-            font-weight: 700;
-            color: #38bdf8;
-            margin-bottom: 10px;
-        }
-        
-        .visual-label {
-            color: #cbd5e1;
-            font-size: 14px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <nav class="site-nav">
-    <div class="nav-container">
-        <div class="nav-brand">Shihab<span>.</span></div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="skills.html">Skills</a>
-            <a href="contact.html">Contact</a>
-        </div>
+    <div class="container nav-inner">
+        <a class="nav-brand" href="index.html">Shihab<span>.</span></a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="pcb.html">PCB Design</a></li>
+            <li><a href="skills.html" class="active">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="nav-cta"><a class="btn btn-primary btn-sm" href="files/Shihabul_Ehsan_CV.pdf" target="_blank" rel="noopener"><i class="fas fa-file-arrow-down"></i> CV</a></li>
+        </ul>
     </div>
 </nav>
 
 <main>
-    <section class="page-section">
-        <div class="skills-header">
-            <h1 class="page-title">Skills & Expertise</h1>
-            <p class="page-intro">
-                Technical competencies developed through UAV systems design, robotics engineering, 
-                embedded flight control, and practical implementation experience.
+    <div class="container">
+
+        <header class="page-head">
+            <p class="eyebrow">Skills</p>
+            <h1 class="page-title">Skills &amp; Expertise</h1>
+            <p class="lead">
+                Technical skills built through UAV design, robotics, embedded flight control,
+                PCB design and hands-on prototyping.
             </p>
+        </header>
+
+        <div class="legend">
+            <span><span class="level level--advanced">Advanced</span> daily use, complete projects</span>
+            <span><span class="level level--proficient">Proficient</span> used across several projects</span>
+            <span><span class="level level--intermediate">Intermediate</span> working knowledge</span>
+            <span><span class="level level--familiar">Familiar</span> have used it</span>
         </div>
-        
-        <!-- Skills Grid -->
-        <div class="skills-grid">
-            <!-- Programming Languages -->
-            <div class="skill-category">
-                <div class="category-header">
-                    <div class="category-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
+
+        <div class="grid grid-auto">
+
+            <div class="card">
+                <div class="skill-group-head">
+                    <div class="icon-badge"><i class="fas fa-layer-group"></i></div>
                     <div>
-                        <h2 style="color: #f8fafc; margin-bottom: 5px;">Programming Languages</h2>
-                        <p style="color: #94a3b8; font-size: 14px;">Development & Implementation</p>
+                        <h2>PCB &amp; Hardware Design</h2>
+                        <p>Schematic, layout &amp; fabrication</p>
                     </div>
                 </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">C / C++</span>
-                        <span class="skill-level">Advanced</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 90%"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">Python</span>
-                        <span class="skill-level">Advanced</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 85%"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">MATLAB</span>
-                        <span class="skill-level">Proficient</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 75%"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">Embedded C</span>
-                        <span class="skill-level">Advanced</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 88%"></div>
-                    </div>
-                </div>
+                <ul class="skill-list">
+                    <li>Altium Designer <span class="level level--advanced">Advanced</span></li>
+                    <li>KiCad <span class="level level--advanced">Advanced</span></li>
+                    <li>EasyEDA <span class="level level--familiar">Familiar</span></li>
+                    <li>PCB Milling &amp; Fabrication <span class="level level--proficient">Proficient</span></li>
+                    <li>3D Design (Fusion 360) <span class="level level--intermediate">Intermediate</span></li>
+                    <li>Circuit Simulation <span class="level level--intermediate">Intermediate</span></li>
+                </ul>
             </div>
-            
-            <!-- Embedded Systems & UAV -->
-            <div class="skill-category">
-                <div class="category-header">
-                    <div class="category-icon">
-                        <i class="fas fa-plane"></i>
-                    </div>
+
+            <div class="card">
+                <div class="skill-group-head">
+                    <div class="icon-badge"><i class="fas fa-plane"></i></div>
                     <div>
-                        <h2 style="color: #f8fafc; margin-bottom: 5px;">UAV & Embedded Systems</h2>
-                        <p style="color: #94a3b8; font-size: 14px;">Flight Control & Robotics Hardware</p>
+                        <h2>UAV &amp; Embedded Systems</h2>
+                        <p>Flight control &amp; robotics hardware</p>
                     </div>
                 </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">Flight Controller Design</span>
-                        <span class="skill-level">Advanced</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 90%"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">PID Control Systems</span>
-                        <span class="skill-level">Advanced</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 88%"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">Sensor Fusion (IMU, Kalman)</span>
-                        <span class="skill-level">Proficient</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 80%"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">Microcontrollers (STM32/ESP32)</span>
-                        <span class="skill-level">Advanced</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 88%"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">ROS2 (Robotics)</span>
-                        <span class="skill-level">Intermediate</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 70%"></div>
-                    </div>
-                </div>
+                <ul class="skill-list">
+                    <li>Flight Controller Design <span class="level level--advanced">Advanced</span></li>
+                    <li>PID Control Systems <span class="level level--advanced">Advanced</span></li>
+                    <li>Sensor Fusion (IMU, Kalman) <span class="level level--proficient">Proficient</span></li>
+                    <li>Microcontrollers (STM32 / ESP32) <span class="level level--advanced">Advanced</span></li>
+                    <li>ROS 2 <span class="level level--intermediate">Intermediate</span></li>
+                </ul>
             </div>
-            
-            <!-- Design & Development Tools -->
-            <div class="skill-category">
-                <div class="category-header">
-                    <div class="category-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
+
+            <div class="card">
+                <div class="skill-group-head">
+                    <div class="icon-badge"><i class="fas fa-code"></i></div>
                     <div>
-                        <h2 style="color: #f8fafc; margin-bottom: 5px;">Design & Development Tools</h2>
-                        <p style="color: #94a3b8; font-size: 14px;">CAD, PCB Design & Simulation</p>
+                        <h2>Programming</h2>
+                        <p>Languages &amp; tooling</p>
                     </div>
                 </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">PCB Design (EasyEDA/KiCAD)</span>
-                        <span class="skill-level">Advanced</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 88%"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">PCB Milling & Fabrication</span>
-                        <span class="skill-level">Proficient</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 85%"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">3D Design (Fusion 360)</span>
-                        <span class="skill-level">Intermediate</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 75%"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">Circuit Simulation</span>
-                        <span class="skill-level">Intermediate</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 72%"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">Git & Version Control</span>
-                        <span class="skill-level">Advanced</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 85%"></div>
-                    </div>
-                </div>
+                <ul class="skill-list">
+                    <li>C / C++ <span class="level level--advanced">Advanced</span></li>
+                    <li>Embedded C <span class="level level--advanced">Advanced</span></li>
+                    <li>Python <span class="level level--advanced">Advanced</span></li>
+                    <li>MATLAB <span class="level level--proficient">Proficient</span></li>
+                    <li>Git &amp; Version Control <span class="level level--advanced">Advanced</span></li>
+                </ul>
             </div>
-            
-            <!-- AI/ML & Additional Skills -->
-            <div class="skill-category">
-                <div class="category-header">
-                    <div class="category-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
+
+            <div class="card">
+                <div class="skill-group-head">
+                    <div class="icon-badge"><i class="fas fa-microchip"></i></div>
                     <div>
-                        <h2 style="color: #f8fafc; margin-bottom: 5px;">AI/ML & Additional Skills</h2>
-                        <p style="color: #94a3b8; font-size: 14px;">Machine Learning & Computer Vision</p>
+                        <h2>Microcontrollers &amp; Platforms</h2>
+                        <p>Hands-on experience</p>
                     </div>
                 </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">TensorFlow & PyTorch</span>
-                        <span class="skill-level">Intermediate</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 70%"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">OpenCV (Computer Vision)</span>
-                        <span class="skill-level">Intermediate</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 68%"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">MATLAB/Simulink</span>
-                        <span class="skill-level">Proficient</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 75%"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">Control System Simulation</span>
-                        <span class="skill-level">Proficient</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 78%"></div>
-                    </div>
-                </div>
+                <ul class="skill-list">
+                    <li>STM32 Family <span class="level level--advanced">Advanced</span></li>
+                    <li>ESP32 / ESP8266 <span class="level level--advanced">Advanced</span></li>
+                    <li>Arduino Platform <span class="level level--advanced">Advanced</span></li>
+                    <li>Raspberry Pi <span class="level level--proficient">Proficient</span></li>
+                </ul>
             </div>
-            
-            <!-- Microcontrollers & Platforms -->
-            <div class="skill-category">
-                <div class="category-header">
-                    <div class="category-icon">
-                        <i class="fas fa-microchip"></i>
-                    </div>
+
+            <div class="card">
+                <div class="skill-group-head">
+                    <div class="icon-badge"><i class="fas fa-brain"></i></div>
                     <div>
-                        <h2 style="color: #f8fafc; margin-bottom: 5px;">Microcontrollers & Platforms</h2>
-                        <p style="color: #94a3b8; font-size: 14px;">Hands-on Experience</p>
+                        <h2>AI/ML &amp; Simulation</h2>
+                        <p>Machine learning &amp; computer vision</p>
                     </div>
                 </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">STM32 Family</span>
-                        <span class="skill-level">Advanced</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 88%"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">ESP32/ESP8266</span>
-                        <span class="skill-level">Advanced</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 85%"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">Arduino Platform</span>
-                        <span class="skill-level">Advanced</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 90%"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span class="skill-name">Raspberry Pi</span>
-                        <span class="skill-level">Proficient</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 78%"></div>
-                    </div>
-                </div>
+                <ul class="skill-list">
+                    <li>TensorFlow &amp; PyTorch <span class="level level--intermediate">Intermediate</span></li>
+                    <li>OpenCV <span class="level level--intermediate">Intermediate</span></li>
+                    <li>MATLAB / Simulink <span class="level level--proficient">Proficient</span></li>
+                    <li>Control System Simulation <span class="level level--proficient">Proficient</span></li>
+                </ul>
             </div>
+
         </div>
-        
-        <!-- Expertise Levels -->
-        <div class="expertise-levels">
-            <div class="level-card">
-                <div class="level-icon">
-                    <i class="fas fa-plane"></i>
+
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-user-gear"></i> Roles I fit</h2>
+            <div class="grid grid-4">
+                <div class="card">
+                    <div class="icon-badge"><i class="fas fa-layer-group"></i></div>
+                    <h3>PCB Design Engineer</h3>
+                    <p>Schematic capture, multi-layer layout and fabrication-ready outputs.</p>
                 </div>
-                <h3 style="color: #f8fafc; margin-bottom: 10px;">UAV Specialist</h3>
-                <p style="color: #94a3b8; font-size: 14px;">
-                    Flight controller design, control systems, and aerial robotics
-                </p>
-            </div>
-            
-            <div class="level-card">
-                <div class="level-icon">
-                    <i class="fas fa-robot"></i>
+                <div class="card">
+                    <div class="icon-badge"><i class="fas fa-plane"></i></div>
+                    <h3>UAV Engineer</h3>
+                    <p>Flight controller design, control systems and aerial robotics.</p>
                 </div>
-                <h3 style="color: #f8fafc; margin-bottom: 10px;">Robotics Engineer</h3>
-                <p style="color: #94a3b8; font-size: 14px;">
-                    Autonomous systems, sensor integration, and practical robotics
-                </p>
-            </div>
-            
-            <div class="level-card">
-                <div class="level-icon">
-                    <i class="fas fa-microchip"></i>
+                <div class="card">
+                    <div class="icon-badge"><i class="fas fa-microchip"></i></div>
+                    <h3>Embedded Developer</h3>
+                    <p>Low-level programming and hardware-software integration.</p>
                 </div>
-                <h3 style="color: #f8fafc; margin-bottom: 10px;">Embedded Developer</h3>
-                <p style="color: #94a3b8; font-size: 14px;">
-                    Low-level programming, hardware-software integration, optimization
-                </p>
-            </div>
-            
-            <div class="level-card">
-                <div class="level-icon">
-                    <i class="fas fa-pencil-ruler"></i>
-                </div>
-                <h3 style="color: #f8fafc; margin-bottom: 10px;">PCB & Control Expert</h3>
-                <p style="color: #94a3b8; font-size: 14px;">
-                    Advanced PCB design, PID control implementation, and hardware optimization
-                </p>
-            </div>
-        </div>
-        
-        <!-- Skills Visualization -->
-        <div class="skills-visual">
-            <div class="visual-header">
-                <h2 style="color: #f8fafc; margin-bottom: 15px;">Technical Proficiency Overview</h2>
-                <p style="color: #94a3b8; max-width: 600px; margin: 0 auto;">
-                    Balance of theoretical knowledge and practical implementation skills across key areas of UAV and robotics engineering
-                </p>
-            </div>
-            
-            <div class="visual-grid">
-                <div class="visual-item">
-                    <div class="visual-value">90%</div>
-                    <div class="visual-label">Embedded Programming</div>
-                </div>
-                
-                <div class="visual-item">
-                    <div class="visual-value">88%</div>
-                    <div class="visual-label">PCB Design & Fabrication</div>
-                </div>
-                
-                <div class="visual-item">
-                    <div class="visual-value">88%</div>
-                    <div class="visual-label">PID Control Systems</div>
-                </div>
-                
-                <div class="visual-item">
-                    <div class="visual-value">85%</div>
-                    <div class="visual-label">Robotics Engineering</div>
+                <div class="card">
+                    <div class="icon-badge"><i class="fas fa-robot"></i></div>
+                    <h3>Robotics Engineer</h3>
+                    <p>Autonomous systems, sensor integration and practical robotics.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+    </div>
 </main>
 
 <footer class="site-footer">
-    <div class="nav-container">
-        <p>© 2024 Shihabul Ehsan. All rights reserved.</p>
-        <p style="margin-top: 10px; font-size: 12px; color: #94a3b8;">
-            <i class="fas fa-plane"></i> UAV & Robotics Portfolio
-        </p>
+    <div class="container footer-inner">
+        <p>© <span class="year">2026</span> Shihabul Ehsan · Khulna, Bangladesh</p>
+        <div class="footer-social">
+            <a href="mailto:shihabulehsan@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/shihabul-ehsan-132464304/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Shihabul-glitch" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.youtube.com/@have_fun1107" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
     </div>
 </footer>
 
