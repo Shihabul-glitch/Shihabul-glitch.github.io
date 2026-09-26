@@ -14,7 +14,7 @@
     --heading: #f8fafc;
     --text: #d6dde8;
     --muted: #94a3b8;
-    --faint: #64748b;
+    --faint: #8290a6;   /* >= 4.5:1 on page and card backgrounds */
 
     --accent: #38bdf8;
     --accent-strong: #0ea5e9;
@@ -344,6 +344,45 @@ main { padding: 56px 0 80px; }
 }
 .project-card .project-links { border-top: 1px solid var(--border); margin-top: 20px; }
 
+/* Optional image at the top of a project card (own projects only) */
+.project-thumb {
+    display: block;
+    margin: -24px -24px 18px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+    border-radius: var(--radius) var(--radius) 0 0;
+    background: var(--surface-2);
+}
+.project-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.25s ease; }
+.project-card:hover .project-thumb img { transform: scale(1.03); }
+/* Play button over thumbnails that open a video */
+.project-thumb.video { position: relative; }
+.project-thumb.video::after {
+    content: "\f04b";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 56px;
+    height: 56px;
+    margin: -28px 0 0 -28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 4px;
+    border-radius: 50%;
+    background: rgba(10, 15, 28, 0.75);
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    font-size: 1.1rem;
+}
+
+/* "Proof" link after a skill, pointing at the project that shows it */
+.proof { margin-left: 6px; font-size: 0.78rem; color: var(--muted); white-space: nowrap; }
+.proof:hover { color: var(--accent); }
+
 .filter-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 40px; }
 .filter-btn {
     padding: 7px 16px;
@@ -654,10 +693,15 @@ a.pcb-card:hover h3 { color: var(--accent); }
     :root { --gutter: 16px; }
     main { padding: 36px 0 56px; }
     .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
-    .stats.grid-4, .values.grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .stats.grid-4, .values.grid-4, .grid-4.compact { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
     .section { margin-top: 56px; }
     .featured, .showcase, .quote { padding: 22px; }
     .card { padding: 20px; }
+    .project-thumb { margin: -20px -20px 16px; }
+    .grid-4.compact .card { padding: 16px; }
+    .grid-4.compact .icon-badge { width: 36px; height: 36px; margin-bottom: 10px; font-size: 1rem; }
+    .grid-4.compact h3 { font-size: 1rem; }
+    .grid-4.compact p { font-size: 0.85rem; }
     .timeline { padding-left: 26px; }
     .timeline-item::before { left: -26px; }
     .footer-inner { flex-direction: column; text-align: center; }

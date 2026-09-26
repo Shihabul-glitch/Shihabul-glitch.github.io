@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shihabul-glitch.github.io/sitemap.xml
