@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Low-Power Cattle Health Monitor | PCB Design | Shihabul Ehsan</title>
+    <meta name="description" content="Low-power cattle health monitor by Shihabul Ehsan: ESP32-C6 device tracking body orientation and temperature at 450 uA average current, designed in KiCad and manufactured by PCBWay.">
+    <link rel="canonical" href="https://shihabul-glitch.github.io/pcb/cattle-health-monitor.html">
+    <link rel="icon" href="../favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+    <meta name="theme-color" content="#0a0f1c">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Shihabul Ehsan">
+    <meta property="og:title" content="Low-Power Cattle Health Monitor | PCB Design | Shihabul Ehsan">
+    <meta property="og:description" content="Low-power cattle health monitor by Shihabul Ehsan: ESP32-C6 device tracking body orientation and temperature at 450 uA average current, designed in KiCad and manufactured by PCBWay.">
+    <meta property="og:url" content="https://shihabul-glitch.github.io/pcb/cattle-health-monitor.html">
+    <meta property="og:image" content="https://shihabul-glitch.github.io/images/og-card.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+    <div class="container nav-inner">
+        <a class="nav-brand" href="../index.html">Shihab<span>.</span></a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../pcb.html" class="active">PCB Design</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="../skills.html">Skills</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li class="nav-cta"><a class="btn btn-primary btn-sm" href="../files/Shihabul_Ehsan_CV.pdf" target="_blank" rel="noopener"><i class="fas fa-file-arrow-down"></i> CV</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <div class="container">
+
+        <p class="breadcrumb"><a href="../pcb.html"><i class="fas fa-arrow-left"></i> PCB Design</a> / Cattle Health Monitor</p>
+
+        <header class="page-head">
+            <p class="eyebrow"><i class="fas fa-heart-pulse"></i> Client project · KiCad · PCBWay</p>
+            <h1 class="page-title">Low-Power Cattle Health Monitor</h1>
+            <p class="lead">A low-power device that tracks a cow's body orientation and body temperature, built around an ESP32-C6. I designed the schematic and PCB in KiCad for a client; the firmware was developed by someone else.</p>
+        </header>
+
+        <section class="grid grid-aside">
+            <a class="hero-shot" href="../images/pcb/cattle-health-monitor/2-manufactured-board-pcbway.webp" data-lightbox data-caption="Manufactured board (PCBWay)">
+                <img src="../images/pcb/cattle-health-monitor/2-manufactured-board-pcbway.webp" alt="Manufactured cattle health monitor PCB" width="873" height="1209" style="max-height: 560px; object-fit: contain;">
+            </a>
+            <aside class="card">
+                <table class="spec-table">
+                    <tr><th>Tool</th><td>KiCad</td></tr>
+                    <tr><th>My role</th><td>Schematic and PCB layout<br><span class="small">Firmware by another developer</span></td></tr>
+                    <tr><th>MCU</th><td>ESP32-C6</td></tr>
+                    <tr><th>Measures</th><td>Body orientation (accelerometer) and body temperature</td></tr>
+                    <tr><th>Average current</th><td>450 µA (calculated)</td></tr>
+                    <tr><th>Battery life</th><td>About 6 months on one 1S 2200 mAh Li-ion charge</td></tr>
+                    <tr><th>Manufacturing</th><td><span class="status status--done" style="margin: 0;">PCBWay</span></td></tr>
+                </table>
+            </aside>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-bolt"></i> Design highlights</h2>
+            <ul class="highlights">
+                <li><b>Low power by design.</b> About 450 µA average current (calculated), so the device runs about 6 months on a single charge of a 1S 2200 mAh Li-ion battery.</li>
+                <li><b>Two health signals.</b> Body orientation from an accelerometer, and body temperature.</li>
+                <li><b>From schematic to manufactured board.</b> Designed in KiCad around an ESP32-C6 and manufactured by PCBWay.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-images"></i> Gallery</h2>
+            <p class="section-sub">Click an image to enlarge it.</p>
+            <div class="gallery">
+                <figure>
+                    <a href="../images/pcb/cattle-health-monitor/1-pcb-layout-top-copper.webp" data-lightbox data-caption="PCB layout, top copper">
+                        <img src="../images/pcb/cattle-health-monitor/1-pcb-layout-top-copper-thumb.webp" alt="PCB layout, top copper" loading="lazy"></a>
+                    <figcaption>PCB layout, top copper</figcaption>
+                </figure>
+                <figure>
+                    <a href="../images/pcb/cattle-health-monitor/2-manufactured-board-pcbway.webp" data-lightbox data-caption="Manufactured board (PCBWay)">
+                        <img src="../images/pcb/cattle-health-monitor/2-manufactured-board-pcbway-thumb.webp" alt="Manufactured board (PCBWay)" loading="lazy"></a>
+                    <figcaption>Manufactured board (PCBWay)</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="btn-row">
+                <a href="../pcb.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> All PCB work</a>
+                <a href="../projects.html" class="btn btn-outline">All projects</a>
+            </div>
+        </section>
+
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© <span class="year">2026</span> Shihabul Ehsan · Khulna, Bangladesh</p>
+        <div class="footer-social">
+            <a href="mailto:shihabulehsan@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/shihabul-ehsan-132464304/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Shihabul-glitch" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.youtube.com/@have_fun1107" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>
