@@ -485,10 +485,34 @@ main { padding: 56px 0 80px; }
 .legend { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 32px; font-size: 0.85rem; color: var(--muted); }
 .legend span { display: inline-flex; align-items: center; gap: 8px; }
 
-/* ---------- Contact ---------- */
-.contact-card .icon-badge { margin-bottom: 14px; }
-.contact-card a { display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; font-weight: 500; overflow-wrap: anywhere; }
-.contact-card .small { margin-top: 14px; }
+/* ---------- Contact: one compact, centred block ---------- */
+.contact-box { max-width: 560px; margin: 24px auto 0; text-align: center; }
+.contact-box .eyebrow { justify-content: center; }
+.contact-box .lead { margin-bottom: 18px; }
+.contact-actions { justify-content: center; margin: 22px 0 32px; }
+
+.contact-list {
+    list-style: none;
+    padding: 6px 20px;
+    text-align: left;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 11px 0;
+    font-size: 0.925rem;
+    border-top: 1px solid var(--border);
+    overflow-wrap: anywhere;
+}
+.contact-list li:first-child { border-top: 0; }
+.contact-list i { width: 18px; text-align: center; color: var(--accent); flex-shrink: 0; }
+.contact-list a { color: var(--text); }
+.contact-list a:hover { color: var(--accent); }
+.contact-list span { color: var(--muted); }
 
 .small { font-size: 0.85rem; color: var(--faint); }
 
